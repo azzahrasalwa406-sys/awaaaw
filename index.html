@@ -1,29 +1,195 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Level Up Day ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Happy Level Up Day ❤️</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<div class="welcome">
+<!-- Floating Hearts -->
+<div class="hearts"></div>
 
-    <h1>Happy Level Up Day 🎂</h1>
 
-    <p>To my lovely boOoo ❤️</p>
+<!-- MUSIC -->
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 
-    <button id="startBtn">
-        Please Open Me 🎁
-    </button>
+
+<!-- WELCOME PAGE -->
+<section id="welcome" class="page active">
+
+    <div class="card">
+
+        <h1>
+            Happy Level Up Day 🎂
+        </h1>
+
+        <p>
+            To My Lovely boOoo ❤️
+        </p>
+
+        <button onclick="openGift()">
+            Please Open Me 🎁
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- PIN PAGE -->
+<section id="pinPage" class="page">
+
+    <div class="card">
+
+        <h2>
+            🔒 A Little Secret
+        </h2>
+
+        <p>
+            Only my boOoo knows this 🤍
+        </p>
+
+        <input 
+        type="password" 
+        id="pinInput" 
+        placeholder="Enter PIN">
+
+        <button onclick="checkPin()">
+            Unlock ✨
+        </button>
+
+        <p id="wrong"></p>
+
+    </div>
+
+</section>
+
+
+
+<!-- BIRTHDAY PAGE -->
+<section id="birthday" class="page">
+
+    <div class="card">
+
+        <h1>
+            Happy Level Up Day 💕
+        </h1>
+
+        <p>
+            To My Lovely boOoo
+        </p>
+
+        <p class="small">
+            another year older, another year stronger ✨
+        </p>
+
+
+        <button onclick="showLetter()">
+            Read My Letter 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- LETTER PAGE -->
+<section id="letter" class="page">
+
+<div class="card letter">
+
+<h2>
+💌 For You
+</h2>
+
+
+<p id="letterText"></p>
+
+
+<button onclick="showGallery()">
+    Our Memories 📸
+</button>
+
 
 </div>
+
+</section>
+
+
+
+<!-- GALLERY PAGE -->
+<section id="gallery" class="page">
+
+<div class="card">
+
+<h2>
+📸 Our Memories
+</h2>
+
+
+<div class="photos">
+
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+
+</div>
+
+
+<button onclick="showEnd()">
+    One Last Thing 🎁
+</button>
+
+
+</div>
+
+</section>
+
+
+
+<!-- END PAGE -->
+<section id="ending" class="page">
+
+<div class="card">
+
+<h1>
+❤️
+</h1>
+
+
+<p>
+Thank you for existing.
+</p>
+
+
+<p>
+I always wait,<br>
+I miss u so much bb.
+</p>
+
+
+<p>
+Forever cheering for you 🤍
+</p>
+
+
+</div>
+
+</section>
+
+
 
 <script src="script.js"></script>
 
