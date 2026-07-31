@@ -14,10 +14,9 @@ i always wait, i miss u sm bb.`;
 function changePage(page){
 
     document.querySelectorAll(".page")
-    .forEach(p=>{
+    .forEach(p => {
         p.classList.remove("active");
     });
-
 
     document.getElementById(page)
     .classList.add("active");
@@ -30,22 +29,16 @@ function openGift(){
 
     changePage("pinPage");
 
-
-    let music=document.getElementById("music");
-
-    music.play()
-    .catch(()=>{});
-
 }
 
 
 
 function checkPin(){
 
-    let pin=document.getElementById("pinInput").value;
+    let pin = document.getElementById("pinInput").value;
 
 
-    if(pin==="310708"){
+    if(pin === "310708"){
 
         changePage("birthday");
 
@@ -55,7 +48,7 @@ function checkPin(){
 
     else{
 
-        document.getElementById("wrong").innerHTML=
+        document.getElementById("wrong").innerHTML =
         "Wrong PIN 🥺 Try again";
 
     }
@@ -69,19 +62,19 @@ function showLetter(){
     changePage("letter");
 
 
-    let text=document.getElementById("letterText");
+    let text = document.getElementById("letterText");
 
-    text.innerHTML="";
+    text.innerHTML = "";
 
 
-    let i=0;
+    let i = 0;
 
 
     function typing(){
 
-        if(i<letter.length){
+        if(i < letter.length){
 
-            text.innerHTML+=letter.charAt(i);
+            text.innerHTML += letter.charAt(i);
 
             i++;
 
@@ -114,29 +107,27 @@ function showEnd(){
 
 
 
-
 function createHearts(){
 
     setInterval(()=>{
 
+        let heart = document.createElement("div");
 
-        let heart=document.createElement("div");
+        heart.className = "heart";
 
-        heart.className="heart";
-
-        heart.innerHTML="❤";
-
-
-        heart.style.left=
-        Math.random()*100+"%";
+        heart.innerHTML = "❤";
 
 
-        heart.style.fontSize=
-        Math.random()*30+15+"px";
+        heart.style.left =
+        Math.random()*100 + "%";
 
 
-        heart.style.animationDuration=
-        Math.random()*5+5+"s";
+        heart.style.fontSize =
+        Math.random()*30 + 15 + "px";
+
+
+        heart.style.animationDuration =
+        Math.random()*5 + 5 + "s";
 
 
         document.body.appendChild(heart);
