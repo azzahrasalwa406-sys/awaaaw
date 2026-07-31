@@ -31,12 +31,17 @@ function openGift(){
     changePage("pinPage");
 
 
-    let music=document.getElementById("music");
+   let music = document.getElementById("music");
 
-    music.play()
-    .catch(()=>{});
+music.volume = 0.5;
 
-}
+music.play()
+.then(() => {
+    console.log("Music playing");
+})
+.catch(() => {
+    alert("Klik lagi untuk menyalakan musik 🎵");
+});
 
 
 
